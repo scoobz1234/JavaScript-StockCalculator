@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang ='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Stephen Ouellette</title>
+    <!-- this is a link to the style.css file i made... -->
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" id="StockTransactionForm" onsubmit="return false;">
+        <fieldset>
+            <legend><h2>STOCK TRANSACTION CALCULATOR</h2></legend>
+            <label class="lbl1"><b>Data Input:</b></label>
+            <p class="p2" ><br>
+            <!-- Inline label, attached to number of shares input text field -->
+            <label class="inlinelabel" for="numberOfShares"><b>Number of Shares</b></label>
+            <!-- text field for the number of shares, default value of 1000 -->
+            <input type="text" id="numberOfShares" name="numberOfShares" value="1000" />
+            <!-- Inline label, attached to price of shares input text field -->
+            <label class="inlinelabel" for="priceOfShares"><b>Price of Shares</b></label>
+            <!-- text field for the price of shares, default value is 10 -->
+            <input type="text" id="priceOfShares" name="priceOfShares" value="10" />
+            <!-- inLine label, attached to commision text input field -->
+            <label class="inlinelabel" for="commission"><b>Commision</b></label>
+            <!-- text field for the commision cost of the transaction -->
+            <input type="text" id="commission" name="commission" value=".02" />
+            <br><br><br><br></p>
+            <div class ="hl"></div><br>
+            <label class="lbl1"><b>Type of Transaction:</b></label>
+            <p class="p1">
+            <!-- radio button for user to select buying  -->
+            <input type="radio" name="buyOrSell" value="Buying" onclick="GetTotal()" />
+            Buying<br>
+            <!-- radio button for user to select selling -->
+            <input type="radio" name="buyOrSell" value="Selling" onclick="GetTotal()" />
+            Selling
+            </p>
+            <div class="hl"></div><br>
+            <!-- this is where we will display the cost/profit of the transaction -->
+            <div class="totalAmount" id="totalAmount"></div>
+        </fieldset>
+    </form>
+    <!-- Link the canvas javascript file to this canvas. -->
+    <canvas></canvas>
+	<script src ='canvas.js'></script>
+	<div>
+    <form action ="" class="StockTransactionForm" id="StockTransactionForm" onsubmit="return false;">
+	<script src ="form.js"></script>
+	</div>
+</body>
+</html>
